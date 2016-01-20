@@ -1,13 +1,10 @@
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
+
 
 body {
     font-family: 'Fauna One', serif;}
 
 #canvas {
+    display: none;
     border: black solid 1px;
     position: absolute;
     top: 1rem;
@@ -52,13 +49,21 @@ body {
 
 
 button {
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
     font-weight: bolder;
-    position: relative;
-    bottom: 2rem;
     font-size: 2rem;
     background: transparent;
     border: black solid 1px;
 
+    line-height: 1rem;
+    padding: 0;
+    box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.75);
+}
+
+button:hover {
+    background: #ddd;
 }
 
 

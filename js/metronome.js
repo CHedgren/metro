@@ -1,12 +1,11 @@
 var audioContext = null;
 var isPlaying = false;      // Are we currently playing?
-var startTime;              // The start time of the entire sequence.
+
 var currentNote;        // What note is currently last scheduled?
 var tempo = 120.0;          // tempo (in beats per minute)
 var lookahead = 25.0;       // How frequently to call scheduling fun, ms
 var noteType = 4;
 var scheduleAheadTime = 0.1;    // How far ahead to schedule audio (sec)
-
 var nextNoteTime = 0.0;     // when the next note is due.
 var noteLength = 0.05;      // length of "beep" (in seconds)
 var canvas,                 // the canvas element
@@ -142,5 +141,9 @@ function init() {
     timerWorker.postMessage({"interval": lookahead});
 }
 
+
+function displayCanvas(){
+    document.getElementById('canvas').style.display = 'inline-block';
+}
 
 window.addEventListener("load", init);
