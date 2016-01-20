@@ -1,0 +1,52 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <title>Metro-NOM!</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="stylesheet" href="css/main.css">
+    <link href='https://fonts.googleapis.com/css?family=Fauna+One' rel='stylesheet' type='text/css'></head>
+<body class="container">
+
+<h1>Metro-NOM!</h1>
+<div id="controls">
+
+    <div class="time-signature canvas-container">
+
+        <button class="less-beats" onCLick="beats -= 1; document.getElementById('really-big').innerText=beats;">
+            -
+        </button>
+        <span id="really-big">3  </span>
+        <canvas id="canvas"></canvas>
+        <button class="more-beats" onclick="beats += 1; document.getElementById('really-big').innerText=beats;">
+            +
+        </button>
+    </div>
+
+
+
+    <input id="tempo" type="range" min="30.0" max="160.0" step="1" value="120" style="height: 20px; width: 200px"
+           onInput="tempo = event.target.value; document.getElementById('showTempo').innerText=tempo;">
+    <span><a class="play" onclick="this.innerText = play();"> &#9658 </a><span id="showTempo">120</span></span>
+
+
+    <div class="measure">
+        <button class="less-beats" onclick="noteType = Math.ceil(noteType / 2); document.getElementById('note-type').innerText=noteType;">
+            - </button>
+        <span id="note-type"> 4 </span>
+        <button class="more-beats" onclick="noteType *= 2; document.getElementById('note-type').innerText=noteType;">
+            +
+        </button>
+    </div>
+</div>
+
+
+<script src="js/main.js"></script>
+<script src="js/metronome.js"></script>
+
+
+</body>
+</html>

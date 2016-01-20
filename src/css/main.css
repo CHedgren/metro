@@ -1,0 +1,174 @@
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+body {
+    font-family: 'Fauna One', serif;}
+
+#canvas {
+    border: black solid 1px;
+    position: absolute;
+    top: 1rem;
+    left: 13rem;
+    border-radius: 50%;
+}
+
+
+.play {
+    position: relative;
+    z-index: 6;
+}
+.controls {
+    position: fixed;
+}
+
+.time-signature, .measure {
+    font-size: 10rem;
+    position: relative;
+    z-index: 2;
+}
+
+.time-signature .less-beats {
+    bottom: 6rem;
+    left: 3rem;
+}
+
+.time-signature .more-beats {
+    bottom: 6rem;
+    right: 3.5rem;
+}
+
+.measure .less-beats {
+    bottom: 0rem;
+    left: 3rem;
+}
+
+.measure .more-beats {
+    bottom: 0rem;
+    right: 3.5rem;
+}
+
+
+button {
+    font-weight: bolder;
+    position: relative;
+    bottom: 2rem;
+    font-size: 2rem;
+    background: transparent;
+    border: black solid 1px;
+
+}
+
+
+.time-signature {
+    top: 2.5rem;
+}
+
+#tempo {
+    position: relative;
+    z-index: 5;
+}
+
+.measure {
+    bottom: 3rem;
+}
+
+.controls {
+    background: red;
+    position: relative;
+    z-index: 1;
+}
+
+
+html {
+    background: #f7f7f7 url(http://css-tricks.com/examples/RoundButtons/images/bg.png) repeat center top;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    margin: 7.8px 0;
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #000004;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+}
+input[type=range]::-webkit-slider-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 24px;
+    width: 16px;
+    border-radius: 0px;
+    background: #ffffff;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -8px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #00001e;
+}
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #000004;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+}
+input[type=range]::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 24px;
+    width: 16px;
+    border-radius: 0px;
+    background: #ffffff;
+    cursor: pointer;
+}
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+    background: #000000;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-fill-upper {
+    background: #000004;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 24px;
+    width: 16px;
+    border-radius: 0px;
+    background: #ffffff;
+    cursor: pointer;
+    height: 8.4px;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #000004;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #00001e;
+}
+
